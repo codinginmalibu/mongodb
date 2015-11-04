@@ -1,0 +1,9 @@
+Commands
+
+- use db_name  (EX: use reviews)
+- db (which db selected right now)
+- help
+- db.collection_name.insert()
+- db.collection_name.find()
+    - note: all db methods end with parenthesis, even if there are no parameters
+
