@@ -6,4 +6,21 @@ Commands
 - db.collection_name.insert()
 - db.collection_name.find()
     - note: all db methods end with parenthesis, even if there are no parameters
+- db.collection_name.remove( {key:value} )
+- db.collection_name.update( {key:value, $set: {key:value} } )
+    - only applies to the first matching doc
+    - extra parameter to allow updating multiple docs { multi: true }
 
+    - $inc: {key:value} increments the key by value
+    - insert or update with { upsert:true }
+    - remove a key value pair with { $unset: {key:value} }
+    - rename a key with { $rename: {key:new_name} }
+    - other operators $max, $min, $mul
+
+    - $pop: {key:-1 or 1) to remove first or last element of the array respectively
+
+    - $push: {key:value} adds value to the end of the array
+
+    - $addToSet: {key:value} adds only if the value is unique
+
+    - $pull: {key:value} removed value from an array
